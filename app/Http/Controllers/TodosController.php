@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+// Todo Model
+use App\Todo;
+
 // Todos Controller with CRUD functions
 class TodosController extends Controller
 {
@@ -14,7 +17,11 @@ class TodosController extends Controller
      */
     public function index()
     {
-        return 123;
+        // Get Todos
+        $todos = Todo::all();
+        
+        // Return view with todos
+        return view('todos.index')->with('todos', $todos);
     }
 
     /**
