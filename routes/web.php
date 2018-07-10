@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Basic Routes - show Todos
+Route::get('/', 'TodosController@index');
+
+// Todos Routes
+Route::resource('todo', 'TodosController');
