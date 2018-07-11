@@ -7,14 +7,19 @@
 
    <title>Todo List</title>
 
-   <link rel="stylesheet" href="css/app.css">
+   <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 <body>
 
    <div id="app">
+      {{-- Navbar --}}
+      @include('inc.navbar')
+      
+      {{-- Success and Error Messages --}}
+      @include('inc.messages')
+
       <div class="container">
          <br>
-         
          {{-- Space for Main Content --}}
          @yield('content')
       </div>
@@ -27,5 +32,6 @@
 
    <!-- Scripts -->
    <script src="{{ asset('js/app.js') }}"></script>
+   
 </body>
 </html>
