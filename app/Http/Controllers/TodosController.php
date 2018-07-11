@@ -12,6 +12,7 @@ class TodosController extends Controller
 {
     /**
      * Display a listing of Todos.
+     * Order by created_at, Decending
      *
      * @return \Illuminate\Http\Response
      */
@@ -34,7 +35,8 @@ class TodosController extends Controller
      */
     public function create()
     {
-        //
+        // Show create Todo form
+        return view('todos.create');
     }
 
     /**
@@ -45,7 +47,7 @@ class TodosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return 'submitted';
     }
 
     /**
