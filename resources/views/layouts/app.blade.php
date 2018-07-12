@@ -14,12 +14,13 @@
    <div id="app">
       {{-- Navbar --}}
       @include('inc.navbar')
-      
-      {{-- Success and Error Messages --}}
-      @include('inc.messages')
 
       <div class="container">
+         {{-- Success and Error Messages --}}
+         @include('inc.messages')
+
          <br>
+         
          {{-- Space for Main Content --}}
          @yield('content')
       </div>
