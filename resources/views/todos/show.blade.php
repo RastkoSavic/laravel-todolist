@@ -10,4 +10,9 @@
    <div class="badge badge-danger">{{$todo->due}}</div>
    <hr>
    <p>{{$todo->body}}</p>
+   <br>
+   <br>
+   <div class="clearfix">
+      <a href="/todo/{{$todo->id}}/edit" class="float-left btn btn-info">Edit</a>
+   </div>
 @endsection
