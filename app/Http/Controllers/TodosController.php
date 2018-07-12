@@ -119,7 +119,7 @@ class TodosController extends Controller
         // Update Todo
         $todo->save();
 
-        return redirect('/')->with('success', 'Todo Updates');
+        return redirect('/')->with('success', 'Todo Updated');
     }
 
     /**
@@ -130,6 +130,12 @@ class TodosController extends Controller
      */
     public function destroy($id)
     {
-        //
+        // Find Todo         
+        $todo = Todo::find($id);
+
+        // Delete Todo
+        $todo->delete();
+
+        return redirect('/')->with('success', 'Todo Deleted');
     }
 }
